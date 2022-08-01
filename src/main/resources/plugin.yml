@@ -1,0 +1,5 @@
+name: NPCMan
+version: '${project.version}'
+main: fun.kaituo.npcman.NPCMan
+api-version: 1.18
+depend: [ ProtocolLib ]
