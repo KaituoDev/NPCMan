@@ -1,0 +1,119 @@
+/npc info
+-----------------------NPCMan-----------------------
+NPCMan is a server-side plugin for spigot that
+allows you to create NPCs and interact with them.
+
+In-game help: /npc help
+Documentation: Github wiki
+Project page: Github
+
+Copyright (C) 2022  Kaituo
+----------------------------------------------------
+
+/npc help
+--------------------NPCMan Help---------------------
+The following subcommands are available:
+(click to view, or /npc help <subcommand>)
+
+           info                      help
+          create                    spawn
+          modify                     list
+          remove                   dispose
+
+----------------------------------------------------
+
+/npc help info
+--------------------NPCMan Help---------------------
+
+Subcommand: info
+
+Description: Displays information about the plugin.
+Usage: /npc info
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help help
+--------------------NPCMan Help---------------------
+
+Subcommand: help
+
+Description: Displays the help page.
+Usage: /npc help [subcommand]
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help create
+--------------------NPCMan Help---------------------
+
+Subcommand: create
+
+Description: Registers a new NPC.
+Usage: /npc create <skin> <display_name>
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help spawn
+--------------------NPCMan Help---------------------
+
+Subcommand: spawn
+
+Description: Spawns a registered NPC in world.
+Usage: /npc spawn <uuid> <x y z> [yaw pitch]
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help modify
+--------------------NPCMan Help---------------------
+
+Subcommand: modify
+
+Description: Modifies a registered/spawned NPC.
+Usage: /npc modify <uuid> <property> <value>
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help list
+--------------------NPCMan Help---------------------
+
+Subcommand: list
+
+Description: Lists all registered NPCs.
+Usage: /npc list
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help remove
+--------------------NPCMan Help---------------------
+
+Subcommand: remove
+
+Description: Removes a spawned NPC from world.
+Usage: /npc remove <uuid>
+
+< Go back to main help page >
+
+----------------------------------------------------
+
+/npc help dispose
+--------------------NPCMan Help---------------------
+
+Subcommand: dispose
+
+Description: Unregisters a registered NPC.
+Usage: /npc dispose <uuid>
+
+< Go back to main help page >
+
+----------------------------------------------------

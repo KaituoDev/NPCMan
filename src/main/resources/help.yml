@@ -1,0 +1,112 @@
+info:
+  - - text: "-----------------------"
+      color: gold
+    - text: "NPCMan"
+      color: gray
+    - text: "-----------------------"
+      color: gold
+  - - text: "NPCMan is a server-side plugin for spigot that"
+      color: gray
+  - - text: "allows you to create NPCs and interact with them."
+      color: gray
+  - - text: ""
+  - - text: "In-game help: "
+      color: gold
+    - text: "/npc help"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help"
+      hoverEvent:
+        action: show_text
+        value:
+          text: "Click to open in-game help"
+  - - text: "Documentation: "
+      color: gold
+    - text: "Github wiki"
+      color: aqua
+      clickEvent:
+        action: open_url
+        value: https://github.com/Minigames-Kaituo/NPCMan/wiki
+      hoverEvent:
+        action: show_text
+        value:
+          text: "Click to open the wiki"
+  - - text: "Project page: "
+      color: gold
+    - text: "Github project"
+      color: aqua
+      clickEvent:
+        action: open_url
+        value: https://github.com/Minigames-Kaituo/NPCMan
+      hoverEvent:
+        action: show_text
+        value:
+          text: "Click to open the project page"
+  - - text: ""
+  - - text: "Copyright (C) 2022  Kaituo"
+      color: dark_gray
+  - - text: "----------------------------------------------------"
+      color: gold
+help:
+  - - text: "--------------------"
+      color: gold
+    - text: "NPCMan Help"
+      color: gray
+    - text: "---------------------"
+      color: gold
+  - - text: "The following subcommands are available:"
+      color: gray
+  - - text: "(click to view, or /npc help <subcommand>)"
+      color: gray
+  - - text: ""
+  - - text: "           "
+    - text: "info"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help info"
+    - text: "                      "
+    - text: "help"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help help"
+  - - text: "          "
+    - text: "create"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help create"
+    - text: "                    "
+    - text: "spawn"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help spawn"
+  - - text: "          "
+    - text: "modify"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help modify"
+    - text: "                     "
+    - text: "list"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help list"
+  - - text: "          "
+    - text: "remove"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help remove"
+    - text: "                   "
+    - text: "dispose"
+      color: aqua
+      clickEvent:
+        action: run_command
+        value: "/npc help dispose"
+  - - text: "----------------------------------------------------"
+      color: gold

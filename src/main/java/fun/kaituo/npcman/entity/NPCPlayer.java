@@ -9,9 +9,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.craftbukkit.v1_18_R2.CraftWorld;
 import org.bukkit.entity.Player;
+import org.bukkit.event.HandlerList;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.UUID;
@@ -42,6 +44,14 @@ public class NPCPlayer extends ServerPlayer {
         return new NPCPlayer(((CraftWorld)world).getHandle(), profile, displayName);
     }
     
+    public void spawn(Location location) {
+        spawn(location.getX(), location.getY(), location.getZ(), location.getYaw(), location.getPitch());
+    }
+    
+    public void spawn(double x, double y, double z) {
+        spawn(x, y, z, 0, 0);
+    }
+    
     public void spawn(double x, double y, double z, float yaw, float pitch) {
         moveTo(x, y, z);
         setRot(yaw, pitch);
@@ -66,6 +76,12 @@ public class NPCPlayer extends ServerPlayer {
     
     public void remove() {
         die(DamageSource.GENERIC);
+        HandlerList.unregisterAll(playerJoinListener);
+    }
+    
+    public void dispose() {
+        remove();
+        CREATED_NPCS.remove(getGameProfile().getId());
     }
     
     public String getNPCDisplayName() {

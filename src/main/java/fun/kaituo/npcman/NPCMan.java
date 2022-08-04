@@ -27,6 +27,7 @@ public final class NPCMan extends JavaPlugin {
     public static HashMap<UUID, NPCPlayer> CREATED_NPCS;
     public static Gson GSON;
     public static ProtocolManager PROTOCOL_MANAGER;
+    public static File DATA_FOLDER;
     private File npcSave;
     
     @Override
@@ -39,6 +40,7 @@ public final class NPCMan extends JavaPlugin {
         if (!getDataFolder().exists()) {
             getDataFolder().mkdir();
         }
+        DATA_FOLDER = getDataFolder();
         try {
             npcSave = new File(getDataFolder(), "npc.json");
         } catch (Exception e) {

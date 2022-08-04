@@ -1,17 +1,27 @@
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonSerializationContext;
 import fun.kaituo.npcman.NPCMan;
+import fun.kaituo.npcman.io.PagesParser;
 import fun.kaituo.npcman.util.PlayerUtil;
+import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.KeybindComponent;
+import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.chat.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,7 +52,7 @@ public class TestMain {
         get.releaseConnection();
     }*/
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         UUID uuid = UUID.fromString("c9a8f8f8-f8f8-f8f8-f8f8-f8f8f8f8f8f8");
         System.out.println(getSkinURLFromUUID(uuid));
     }
@@ -108,5 +118,21 @@ public class TestMain {
         class Texture {
             public String url;
         }
+    }*/
+    
+    public static void main(String[] args) {
+        File file = new File("/Users/gjt/Documents/idea/Minigame-server/NPCMan/src/main/resources/help.yml");
+        PagesParser parser = new PagesParser(file);
+        List<BaseComponent[]> list = parser.getPage("info");
+        for (BaseComponent[] components : list) {
+            for (BaseComponent component : components) {
+                System.out.print(component.toLegacyText());
+            }
+            System.out.println();
+        }
     }
+    
+    /*public static void main(String[] args) {
+        System.out.println(null instanceof String);
+    }*/
 }
